@@ -126,19 +126,20 @@ public class GDirectionsApiUtils {
 					// Add the point to the polyline
 					lineOptions.add(point.getLatLng());
 					// Mark the last GDPoint of the path with a HUE_AZURE marker
-					if (i == path.getPath().size() - 1) {
+					/*if (i == path.getPath().size() - 1) {
 						map.addMarker(new MarkerOptions().position(point.getLatLng()).title("Step " + i)
 								.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
-					}
+					}*/
 				}
 				// A 5 width Polyline please
-				lineOptions.width(5);
+				lineOptions.width(10);
 				// The polyline color (alternating green/blue path)
-				if (pathIndex % 2 == 0) {
+				/*if (pathIndex % 2 == 0) {
 					lineOptions.color(Color.GREEN);
 				} else {
 					lineOptions.color(Color.BLUE);
-				}
+				}*/
+				lineOptions.color(Color.BLUE);
 				// Drawing polyline in the Google Map for the i-th route
 				map.addPolyline(lineOptions);
 			}
